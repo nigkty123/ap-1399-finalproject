@@ -10,6 +10,10 @@ class IntroWindow(QMainWindow, form):
         super(IntroWindow, self).__init__()
         self.setupUi(self)
 
+        self.QuitButton.clicked.connect(self.exit)
+    def exit(self):
+        app.quit()    
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     app.setStyle("Fusion")
