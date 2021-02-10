@@ -6,88 +6,25 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1533</width>
-    <height>1572</height>
+    <width>800</width>
+    <height>600</height>
    </rect>
-  </property>
-  <property name="font">
-   <font>
-    <family>IRANSansWeb Medium</family>
-   </font>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="QuitButton">
+   <widget class="QPushButton" name="CreatButton">
     <property name="geometry">
      <rect>
-      <x>700</x>
-      <y>1310</y>
-      <width>151</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
-    </property>
-    <property name="text">
-     <string>Quit</string>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="InitialstextEdit">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>50</y>
-      <width>501</width>
-      <height>81</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>16</pointsize>
-     </font>
-    </property>
-    <property name="placeholderText">
-     <string>First Name - Last Name</string>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="LocationtextEdit">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>150</y>
-      <width>301</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>IRANSansWeb Light</family>
-      <pointsize>7</pointsize>
-     </font>
-    </property>
-    <property name="placeholderText">
-     <string>City/Country</string>
-    </property>
-   </widget>
-   <widget class="QPlainTextEdit" name="plainTextEdit">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>230</y>
-      <width>481</width>
+      <x>220</x>
+      <y>190</y>
+      <width>131</width>
       <height>71</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <pointsize>9</pointsize>
-     </font>
-    </property>
-    <property name="placeholderText">
-     <string>Email</string>
+    <property name="text">
+     <string>Create My Resume</string>
     </property>
    </widget>
   </widget>
@@ -96,8 +33,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1533</width>
-     <height>44</height>
+     <width>800</width>
+     <height>21</height>
     </rect>
    </property>
   </widget>
