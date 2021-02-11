@@ -24,19 +24,6 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QPushButton" name="PrintButton">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="text">
-       <string>Print</string>
-      </property>
-     </widget>
-    </item>
-    <item>
      <widget class="QScrollArea" name="scrollArea">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -58,8 +45,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>1406</width>
-         <height>1223</height>
+         <width>1372</width>
+         <height>1299</height>
         </rect>
        </property>
        <property name="maximumSize">
@@ -122,7 +109,7 @@
             <property name="sizePolicy">
              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
               <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
+              <verstretch>100</verstretch>
              </sizepolicy>
             </property>
            </widget>
@@ -145,12 +132,52 @@
             <property name="sizePolicy">
              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
               <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
+              <verstretch>100</verstretch>
              </sizepolicy>
+            </property>
+            <property name="inputMethodHints">
+             <set>Qt::ImhEmailCharactersOnly</set>
             </property>
            </widget>
           </item>
           <item row="2" column="0">
+           <widget class="QLabel" name="addressLabel">
+            <property name="text">
+             <string>Address</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="adressLineEdit">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>100</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="phoneLabel">
+            <property name="text">
+             <string>Phone</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QLineEdit" name="phoneLineEdit">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>100</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="inputMethodHints">
+             <set>Qt::ImhPreferNumbers</set>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
            <widget class="QLabel" name="educationLabel">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
@@ -163,18 +190,18 @@
             </property>
            </widget>
           </item>
-          <item row="2" column="1">
+          <item row="4" column="1">
            <widget class="QLineEdit" name="educationLineEdit">
             <property name="sizePolicy">
              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
               <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
+              <verstretch>100</verstretch>
              </sizepolicy>
             </property>
            </widget>
           </item>
-          <item row="3" column="0">
-           <widget class="QLabel" name="experienceLabel">
+          <item row="5" column="0">
+           <widget class="QLabel" name="experience1Label">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
               <horstretch>0</horstretch>
@@ -182,21 +209,44 @@
              </sizepolicy>
             </property>
             <property name="text">
-             <string>Experience</string>
+             <string>Experience 1</string>
             </property>
            </widget>
           </item>
-          <item row="3" column="1">
-           <widget class="QLineEdit" name="experienceLineEdit">
+          <item row="5" column="1">
+           <widget class="QLineEdit" name="experience1LineEdit">
             <property name="sizePolicy">
              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
               <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
+              <verstretch>100</verstretch>
              </sizepolicy>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
             </property>
            </widget>
           </item>
-          <item row="4" column="0">
+          <item row="6" column="0">
+           <widget class="QLabel" name="experience2Label">
+            <property name="text">
+             <string>Experience 2</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="1">
+           <widget class="QLineEdit" name="experience2LineEdit"/>
+          </item>
+          <item row="7" column="0">
+           <widget class="QLabel" name="experience3Label">
+            <property name="text">
+             <string>Experience 3</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="1">
+           <widget class="QLineEdit" name="experience3LineEdit"/>
+          </item>
+          <item row="8" column="0">
            <widget class="QLabel" name="skillsLabel">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
@@ -209,12 +259,12 @@
             </property>
            </widget>
           </item>
-          <item row="4" column="1">
+          <item row="8" column="1">
            <widget class="QLineEdit" name="skillsLineEdit">
             <property name="sizePolicy">
-             <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+             <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
               <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
+              <verstretch>100</verstretch>
              </sizepolicy>
             </property>
             <property name="clearButtonEnabled">
@@ -222,7 +272,7 @@
             </property>
            </widget>
           </item>
-          <item row="5" column="0">
+          <item row="9" column="0">
            <widget class="QLabel" name="nCAPLabel">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
@@ -235,17 +285,17 @@
             </property>
            </widget>
           </item>
-          <item row="5" column="1">
+          <item row="9" column="1">
            <widget class="QLineEdit" name="nCAPLineEdit">
             <property name="sizePolicy">
-             <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+             <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
               <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
+              <verstretch>100</verstretch>
              </sizepolicy>
             </property>
            </widget>
           </item>
-          <item row="6" column="0">
+          <item row="10" column="0">
            <widget class="QLabel" name="languagesLabel">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
@@ -258,17 +308,17 @@
             </property>
            </widget>
           </item>
-          <item row="6" column="1">
+          <item row="10" column="1">
            <widget class="QLineEdit" name="languagesLineEdit">
             <property name="sizePolicy">
              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
               <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
+              <verstretch>100</verstretch>
              </sizepolicy>
             </property>
            </widget>
           </item>
-          <item row="7" column="0">
+          <item row="11" column="0">
            <widget class="QLabel" name="intrestsLabel">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
@@ -281,17 +331,17 @@
             </property>
            </widget>
           </item>
-          <item row="7" column="1">
+          <item row="11" column="1">
            <widget class="QLineEdit" name="hobbiesLineEdit">
             <property name="sizePolicy">
-             <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+             <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
               <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
+              <verstretch>100</verstretch>
              </sizepolicy>
             </property>
            </widget>
           </item>
-          <item row="8" column="0">
+          <item row="12" column="0">
            <widget class="QLabel" name="descriptionLabel">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
@@ -304,25 +354,49 @@
             </property>
            </widget>
           </item>
-          <item row="8" column="1">
+          <item row="12" column="1">
            <widget class="QLineEdit" name="descriptionLineEdit">
             <property name="sizePolicy">
              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
               <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
+              <verstretch>100</verstretch>
              </sizepolicy>
             </property>
            </widget>
           </item>
-          <item row="9" column="0">
+          <item row="13" column="0">
            <widget class="QLabel" name="jobLabel">
             <property name="text">
              <string>job</string>
             </property>
            </widget>
           </item>
-          <item row="9" column="1">
-           <widget class="QLineEdit" name="jobLineEdit"/>
+          <item row="13" column="1">
+           <widget class="QLineEdit" name="jobLineEdit">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>100</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+          <item row="14" column="0">
+           <widget class="QLabel" name="refrencesLabel">
+            <property name="text">
+             <string>Refrences</string>
+            </property>
+           </widget>
+          </item>
+          <item row="14" column="1">
+           <widget class="QLineEdit" name="refrencesLineEdit">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="MinimumExpanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
           </item>
          </layout>
         </item>
@@ -347,9 +421,15 @@
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="NextButton">
+     <widget class="QPushButton" name="PrintButton">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
       <property name="text">
-       <string>Next</string>
+       <string>Print</string>
       </property>
      </widget>
     </item>
