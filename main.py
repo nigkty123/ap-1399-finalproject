@@ -70,65 +70,49 @@ class IntroWindow(QMainWindow, form):
         skills = self.skillsLineEdit.text()
         refrences = self.refrencesLineEdit.text()
         
-        html = f'''<head> <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic|Open+Sans:300,400,500,700|Waiting+for+the+Sunrise|Shadows+Into+Light' rel='stylesheet' type='text/css' href= "{{ url_for('static',filename='styles/mainpage.css') }}">
-        </head>
-
-<div class="wrapper clearfix">
-<div class="left">
-    
-    <div class="name-hero">
-      
-      <div class="me-img"></div>
-      
-      <div class="name-text">
+        html = f'''<!DOCTYPE html>
+        <html>
+        <head>
+        <style>
         
-        <h1>{Name}</em></h1>
-        <p>{address}</p>
-        <p>{email}</p> 
-        <p>{phone}</p>
-     
-      </div>
-   
-    </div>
-    
-  </div>
- <div class="right">
-    
-    <div class="inner">
-      <section>
-        <h1>Employment</h1>
-        <p>{experience1}</em></p>
-        <p>{experience2}</em></p>
-        <p>{experience3}</em></p>
-      </section>
-      <section>
-        <h1>Technical Skills</h1>
-        <ul class="skill-set">
-          <li>{skills}</li>
+        </style>
+        </head>
+        <div id="header"></div>
+        <div class="left"></div>
+        <div class="stuff">
+        <br><br>
+        <h1>Resume</h1>
+        <h2>{Name}</h2>
+        <hr />
+        <br>
+        <p class="head">Interests</p>
+        <ul>
+            <li>{intrests}</li>
         </ul>
-      </section>
-      <section>
-        <h1>References</h1>
-        <p>{refrences}</em></p>
-      </section>
-            <section>
-        <h1>Personal Interests</h1>
-        <ul class="skill-set">
-          <li>{intrests}</li>
+        <p class="head">Skills</p>
+        <ul>
+            <li>{skills}</li>
         </ul>
-      </section>
-      <section>
-        <div class="handmade">
-          <p>handmade by <em> {Name}</em></p>
+        <p class="head">Education</p>
+        <ul>
+            <li>{education}</li>
+        </ul>
+        <p class="head">Experience</p>
+        <ul>
+            <li>{experience1}</li>
+            <li>{experience2}</li>
+            <li>{experience3}</li>
+        </ul>
+        <p class="head">Notable </p>
+        <ul>
+            <li>Recycling Club</li>
+            <li>Gardening Club</li>
+            <li>Book Club</li>
+        </ul>
         </div>
-      </section>
-    </div>
-    
-  </div>
-  
-  
-  
-</div>
+        <div class="right"></div>
+        <div id="footer">
+        <h2 id="name">Emily</h2></div>
 
     '''
 

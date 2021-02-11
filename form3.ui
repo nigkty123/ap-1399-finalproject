@@ -44,7 +44,7 @@
     <property name="geometry">
      <rect>
       <x>200</x>
-      <y>250</y>
+      <y>360</y>
       <width>101</width>
       <height>51</height>
      </rect>
@@ -60,10 +60,10 @@ background-color: rgb(255, 255, 255);</string>
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>180</y>
-      <width>274</width>
-      <height>61</height>
+      <x>120</x>
+      <y>40</y>
+      <width>311</width>
+      <height>281</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -77,49 +77,52 @@ background-color: rgb(255, 255, 255);</string>
       <number>0</number>
      </property>
      <item>
-      <widget class="QPushButton" name="CreateButton">
+      <widget class="QLabel" name="label_2">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-         <horstretch>30</horstretch>
-         <verstretch>10</verstretch>
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
         </sizepolicy>
        </property>
-       <property name="font">
-        <font>
-         <family>IRANSansWeb</family>
-         <pointsize>9</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(255, 85, 0);font: 9pt &quot;IRANSansWeb&quot;;</string>
-       </property>
        <property name="text">
-        <string>Create My Resume</string>
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>images.png</pixmap>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
        </property>
       </widget>
      </item>
     </layout>
    </widget>
-   <widget class="QLabel" name="label_2">
+   <widget class="QPushButton" name="CreateButton">
     <property name="geometry">
      <rect>
-      <x>244</x>
-      <y>100</y>
-      <width>9</width>
-      <height>25</height>
+      <x>140</x>
+      <y>290</y>
+      <width>218</width>
+      <height>52</height>
      </rect>
     </property>
     <property name="sizePolicy">
-     <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>30</horstretch>
+      <verstretch>10</verstretch>
      </sizepolicy>
     </property>
-    <property name="text">
-     <string/>
+    <property name="font">
+     <font>
+      <family>IRANSansWeb</family>
+      <pointsize>9</pointsize>
+     </font>
     </property>
-    <property name="pixmap">
-     <pixmap>../../../Desktop/images.png</pixmap>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 85, 0);font: 9pt &quot;IRANSansWeb&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Create My Resume</string>
     </property>
    </widget>
   </widget>
