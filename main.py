@@ -44,8 +44,8 @@ class IntroWindow(QMainWindow, form):
         
         Name = self.nameLineEdit.text()
         email = self.emailLineEdit.text()
-        address = self.emailLineEdit.text()
-        phone = self.emailLineEdit.text()
+        address = self.addressLineEdit.text()
+        phone = self.phoneLineEdit.text()
         education = self.educationLineEdit.text()
         experience1 = self.experience1LineEdit.text()
         experience2 = self.experience2LineEdit.text()
@@ -58,7 +58,7 @@ class IntroWindow(QMainWindow, form):
         skills = self.skillsLineEdit.text()
         refrences = self.refrencesLineEdit.text()
         
-        html = f''' <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic|Open+Sans:300,400,500,700|Waiting+for+the+Sunrise|Shadows+Into+Light' rel='stylesheet' type='text/css' href="stylesheet.css" />
+        html = f''' <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic|Open+Sans:300,400,500,700|Waiting+for+the+Sunrise|Shadows+Into+Light' rel='stylesheet' type='text/css' href= "{{ url_for('static',filename='styles/mainpage.css') }}">
 
 <div class="wrapper clearfix">
 <div class="left">
