@@ -16,7 +16,7 @@
    </font>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>CV Maker</string>
   </property>
   <property name="documentMode">
    <bool>false</bool>
@@ -45,7 +45,7 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>1424</width>
+         <width>1372</width>
          <height>1299</height>
         </rect>
        </property>
@@ -455,7 +455,7 @@
      <x>0</x>
      <y>0</y>
      <width>1444</width>
-     <height>21</height>
+     <height>38</height>
     </rect>
    </property>
    <property name="styleSheet">
