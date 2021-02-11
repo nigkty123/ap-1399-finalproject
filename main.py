@@ -58,7 +58,7 @@ class IntroWindow(QMainWindow, form):
         skills = self.skillsLineEdit.text()
         refrences = self.refrencesLineEdit.text()
         
-        html = f''' <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic|Open+Sans:300,400,500,700|Waiting+for+the+Sunrise|Shadows+Into+Light' rel='stylesheet' type='text/css'>
+        html = f''' <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic|Open+Sans:300,400,500,700|Waiting+for+the+Sunrise|Shadows+Into+Light' rel='stylesheet' type='text/css' href="stylesheet.css" />
 
 <div class="wrapper clearfix">
 <div class="left">
@@ -71,7 +71,7 @@ class IntroWindow(QMainWindow, form):
         
         <h1>{Name}</em></h1>
         <p>{address}</p>
-        <p>{email}/p> 
+        <p>{email}</p> 
         <p>({phone}</p>
      
       </div>
