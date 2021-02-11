@@ -9,12 +9,18 @@ from reportlab.lib.units import inch
 from reportlab.pdfgen.canvas import Canvas
 from fpdf import FPDF, HTMLMixin
 
-form = uic.loadUiType(os.path.join(os.getcwd(), "form.ui"))[0]
 
+form = uic.loadUiType(os.path.join(os.getcwd(), "form.ui"))[0]
+form2 = uic.loadUiType(os.path.join(os.getcwd(), "form2.ui"))[0]
        
 class HTML2PDF(FPDF, HTMLMixin):
         pass
 
+class IntroWindow2(QMainWindow,form2):  
+    def __init__(self):
+        super(IntroWindow2, self).__init__()
+        self.setupUi(self)
+        self.DoneButton.clicked.connect(lambda: self.close())
 
 class IntroWindow(QMainWindow, form):
     def __init__(self):
@@ -22,7 +28,10 @@ class IntroWindow(QMainWindow, form):
         self.setupUi(self)
         self.PrintButton.clicked.connect(self.html2pdf)
         self.QuitButton.clicked.connect(self.exit)
-        
+        self.PrintButton.clicked.connect(self.create)
+    def create(self):
+        self.t=IntroWindow2()
+        self.t.show()
 
 
         
