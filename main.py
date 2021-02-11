@@ -12,9 +12,21 @@ from fpdf import FPDF, HTMLMixin
 
 form = uic.loadUiType(os.path.join(os.getcwd(), "form.ui"))[0]
 form2 = uic.loadUiType(os.path.join(os.getcwd(), "form2.ui"))[0]
+form3 = uic.loadUiType(os.path.join(os.getcwd(), "form3.ui"))[0]
        
 class HTML2PDF(FPDF, HTMLMixin):
         pass
+
+class IntroWindow3(QMainWindow,form3):  
+    def __init__(self):
+        super(IntroWindow3, self).__init__()
+        self.setupUi(self)
+        self.CreateButton.clicked.connect(self.create)
+        self.ExitButton.clicked.connect(lambda: self.close())
+    def create(self):
+        self.t=IntroWindow()
+        self.t.show()
+        self.close()
 
 class IntroWindow2(QMainWindow,form2):  
     def __init__(self):
@@ -58,7 +70,8 @@ class IntroWindow(QMainWindow, form):
         skills = self.skillsLineEdit.text()
         refrences = self.refrencesLineEdit.text()
         
-        html = f''' <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic|Open+Sans:300,400,500,700|Waiting+for+the+Sunrise|Shadows+Into+Light' rel='stylesheet' type='text/css' href= "{{ url_for('static',filename='styles/mainpage.css') }}">
+        html = f'''<head> <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic|Open+Sans:300,400,500,700|Waiting+for+the+Sunrise|Shadows+Into+Light' rel='stylesheet' type='text/css' href= "{{ url_for('static',filename='styles/mainpage.css') }}">
+        </head>
 
 <div class="wrapper clearfix">
 <div class="left">
@@ -72,7 +85,7 @@ class IntroWindow(QMainWindow, form):
         <h1>{Name}</em></h1>
         <p>{address}</p>
         <p>{email}</p> 
-        <p>({phone}</p>
+        <p>{phone}</p>
      
       </div>
    
@@ -138,6 +151,6 @@ class IntroWindow(QMainWindow, form):
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     app.setStyle("Fusion")
-    w = IntroWindow()
+    w = IntroWindow3()
     w.show()
     sys.exit(app.exec_())
