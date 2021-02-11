@@ -42,13 +42,13 @@
      <string>Exit</string>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>100</x>
       <y>71</y>
       <width>264</width>
-      <height>201</height>
+      <height>223</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -58,7 +58,7 @@
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../../../Desktop/images.png</pixmap>
+        <pixmap>C:/Users/cmg/Desktop/images.png</pixmap>
        </property>
       </widget>
      </item>
