@@ -1,13 +1,15 @@
 import sys
 import os
 from PyQt5 import uic
-from PyQt5.QtWidgets import QApplication, QMainWindow, QTextEdit, QFileDialog, QFormLayout
+from PyQt5.QtWidgets import QApplication, QMainWindow, QTextEdit, QFileDialog, QFormLayout,QLabel,QLineEdit,QPushButton
 from PyQt5.QtCore import QFileInfo
 from PyQt5.QtPrintSupport import QPrinter
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.units import inch
 from reportlab.pdfgen.canvas import Canvas
 from fpdf import FPDF, HTMLMixin
+from xhtml2pdf import pisa             # import python module
+from flask import Flask
 
 
 form = uic.loadUiType(os.path.join(os.getcwd(), "form.ui"))[0]
@@ -41,20 +43,35 @@ class IntroWindow(QMainWindow, form):
         self.PrintButton.clicked.connect(self.html2pdf)
         self.QuitButton.clicked.connect(self.exit)
         self.PrintButton.clicked.connect(self.create)
+
     def create(self):
         self.t=IntroWindow2()
         self.t.show()
+
 
 
         
         
     def exit(self):
         app.quit()  
+# Utility function
+    def convert_html_to_pdf(self, source_html, output_filename):
+        # open output file for writing (truncated binary)
+        result_file = open(output_filename, "w+b")
 
-
+        # convert HTML to PDF
+        pisa_status = pisa.CreatePDF(
+                source_html,                # the HTML to convert
+                dest=result_file)           # file handle to recieve result
+        # close output file
+        result_file.close()                 # close output file
+        # return False on success and True on errors
+        return pisa_status.err    
+        
     def html2pdf(self ):
         
         Name = self.nameLineEdit.text()
+        lastname = self.lastnameLineEdit.text()
         email = self.emailLineEdit.text()
         address = self.addressLineEdit.text()
         phone = self.phoneLineEdit.text()
@@ -63,64 +80,80 @@ class IntroWindow(QMainWindow, form):
         experience2 = self.experience2LineEdit.text()
         experience3 = self.experience3LineEdit.text()
         nCAP = self.nCAPLineEdit.text()
-        lan = self.languagesLineEdit.text()
         intrests = self.hobbiesLineEdit.text()
         about = self.descriptionLineEdit.text()
         job = self.jobLineEdit.text()
         skills = self.skillsLineEdit.text()
-        refrences = self.refrencesLineEdit.text()
         
-        html = f'''<!DOCTYPE html>
-        <html>
-        <head>
-        <style>
+
+         
         
-        </style>
-        </head>
-        <div id="header"></div>
-        <div class="left"></div>
-        <div class="stuff">
-        <br><br>
-        <h1>Resume</h1>
-        <h2>{Name}</h2>
-        <hr />
-        <br>
-        <p class="head">Interests</p>
-        <ul>
-            <li>{intrests}</li>
+
+        
+
+        
+        simple_pink = f'''<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+        <html style="max-width: 700px;
+        margin: auto;"><body style="max-width: 700px;
+        margin: auto;">
+        <div id="header" style="max-width:700px;margin:auto;border-radius:5px;height:40px;width:100%;background-color:#ffcccc;position:fixed;z-index:1;"></div>
+        
+        <div class="stuff" style="max-width:700px;margin:auto;border-radius:5px;display:inline-block;margin-top:6px;margin-left:10px;width:100%;height:1000px;">
+        <br style="max-width: 700px;
+        margin: auto;"><br style="max-width: 700px;
+        margin: auto;"><h1 style="max-width: 700px;
+        margin: auto;">Resume</h1>
+        <h2 style="max-width: 700px;
+        margin: auto;">{Name} {lastname} </h2>
+        <hr style="max-width: 700px;
+        margin: auto;">
+        <br style="max-width: 700px;
+        margin: auto;"><p class="head" style="max-width:700px;margin:auto;font-family:'Cormorant Garamond';font-size:20px;">Interests</p>
+        <ul style="max-width: 700px;
+        margin: auto;">
+        <li style="max-width:700px;margin:auto;font-family:'Cormorant Garamond';">{intrests}</li>
         </ul>
-        <p class="head">Skills</p>
-        <ul>
-            <li>{skills}</li>
+        <p class="head" style="max-width:700px;margin:auto;font-family:'Cormorant Garamond';font-size:20px;">Skills</p>
+        <ul style="max-width: 700px;
+        margin: auto;">
+        <li style="max-width:700px;margin:auto;font-family:'Cormorant Garamond';">{skills}</li>
         </ul>
-        <p class="head">Education</p>
-        <ul>
-            <li>{education}</li>
+        <p class="head" style="max-width:700px;margin:auto;font-family:'Cormorant Garamond';font-size:20px;">Education</p>
+        <ul style="max-width: 700px;
+        margin: auto;">
+        <a style="max-width:700px;margin:auto;color:black;text-decoration:none;">
+            <li style="max-width:700px;margin:auto;font-family:'Cormorant Garamond';">{education}</li>
+            </a>
         </ul>
-        <p class="head">Experience</p>
-        <ul>
-            <li>{experience1}</li>
-            <li>{experience2}</li>
-            <li>{experience3}</li>
+        <p class="head" style="max-width:700px;margin:auto;font-family:'Cormorant Garamond';font-size:20px;">Experience</p>
+        <ul style="max-width: 700px;
+        margin: auto;">
+        <li style="max-width:700px;margin:auto;font-family:'Cormorant Garamond';">{experience1}</li>
+        <li style="max-width:700px;margin:auto;font-family:'Cormorant Garamond';">{experience2}</li>
+        <li style="max-width:700px;margin:auto;font-family:'Cormorant Garamond';">{experience3}</li>
         </ul>
-        <p class="head">Notable </p>
-        <ul>
-            <li>Recycling Club</li>
-            <li>Gardening Club</li>
-            <li>Book Club</li>
+        <p class="head" style="max-width:700px;margin:auto;font-family:'Cormorant Garamond';font-size:20px;">About me</p>
+        <ul style="max-width: 700px;
+        margin: auto;">
+        <li style="max-width:700px;margin:auto;font-family:'Cormorant Garamond';">{job} | {about}/li>
+        </ul>
+        <p class="head" style="max-width:700px;margin:auto;font-family:'Cormorant Garamond';font-size:20px;">Notable Courses and Projects</p>
+        <ul style="max-width: 700px;
+        margin: auto;">
+        <li style="max-width:700px;margin:auto;font-family:'Cormorant Garamond';">{nCAP}/li>
         </ul>
         </div>
-        <div class="right"></div>
-        <div id="footer">
-        <h2 id="name">Emily</h2></div>
+        
+        <div id="footer" style="max-width:700px;margin:auto;border-radius:5px;height:50px;width:100%;background-color:#ffcccc;clear:both;position:relative;">
+        <h2 id="name" style="max-width:700px;margin:auto;font-family:Sacramento;float:right;margin-top:10px;margin-right:4%;">{phone} | {email}</h2>
+        <h2 id="name" style="max-width:700px;margin:auto;font-family:Sacramento;float:right;margin-top:10px;margin-right:4%;">{address}</h2>
+        </div>
+        </body></html>
+            '''
 
-    '''
-
-        pdf = HTML2PDF()
-        #First page
-        pdf.add_page()
-        pdf.write_html(html)
-        pdf.output('Resume.pdf', 'F')
+        output_filename = "Resume.pdf"
+        pisa.showLogging()
+        self.convert_html_to_pdf(simple_pink, output_filename)
 
     
     
