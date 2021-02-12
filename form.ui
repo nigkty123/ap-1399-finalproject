@@ -18,6 +18,9 @@
   <property name="windowTitle">
    <string>CV Maker</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">gridline-color: rgb(87, 132, 255);</string>
+  </property>
   <property name="documentMode">
    <bool>false</bool>
   </property>
@@ -377,7 +380,7 @@
           <item row="14" column="0">
            <widget class="QLabel" name="jobLabel">
             <property name="text">
-             <string>job</string>
+             <string>Job</string>
             </property>
            </widget>
           </item>
@@ -391,75 +394,9 @@
             </property>
            </widget>
           </item>
-          <item row="15" column="0">
-           <widget class="QLabel" name="colorLabel">
-            <property name="text">
-             <string>Color</string>
-            </property>
-           </widget>
-          </item>
-          <item row="15" column="1">
-           <widget class="QComboBox" name="comboBox">
-            <item>
-             <property name="text">
-              <string>IndianRed</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>LightCoral</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Salmon</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>White</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Silver</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Gray</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Yellow</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Green</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Aqua</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Navy</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Purple</string>
-             </property>
-            </item>
-           </widget>
-          </item>
          </layout>
         </item>
-        <item>
+        <item alignment="Qt::AlignRight">
          <widget class="QScrollBar" name="verticalScrollBar">
           <property name="enabled">
            <bool>true</bool>
@@ -503,6 +440,9 @@ background-color: rgb(255, 170, 0);</string>
         <horstretch>0</horstretch>
         <verstretch>0</verstretch>
        </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Exit</string>
