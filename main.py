@@ -44,17 +44,11 @@ class IntroWindow(QMainWindow, form):
         self.QuitButton.clicked.connect(self.exit)
         self.PrintButton.clicked.connect(self.create)
  
-
-  
-        
-
     def create(self):
         self.t=IntroWindow2()
         self.t.show()
 
 
- 
-        
     def exit(self):
         app.quit()  
 
@@ -347,9 +341,6 @@ class IntroWindow(QMainWindow, form):
 
 
 
-
-
-       
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
