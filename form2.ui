@@ -29,7 +29,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>CV Maker</string>
+   <string>Resume Builder</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="sizePolicy">

@@ -16,7 +16,7 @@
    </font>
   </property>
   <property name="windowTitle">
-   <string>CV Maker</string>
+   <string>Resume Builder</string>
   </property>
   <property name="styleSheet">
    <string notr="true">gridline-color: rgb(87, 132, 255);</string>
