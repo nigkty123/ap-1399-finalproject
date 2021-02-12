@@ -332,7 +332,7 @@
            </widget>
           </item>
           <item row="12" column="0">
-           <widget class="QLabel" name="intrestsLabel">
+           <widget class="QLabel" name="interestsLabel">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
               <horstretch>0</horstretch>
@@ -340,7 +340,7 @@
              </sizepolicy>
             </property>
             <property name="text">
-             <string>Intrests</string>
+             <string>Interests</string>
             </property>
            </widget>
           </item>
@@ -392,6 +392,37 @@
               <verstretch>100</verstretch>
              </sizepolicy>
             </property>
+           </widget>
+          </item>
+          <item row="15" column="0">
+           <widget class="QLabel" name="layoutColorLabel">
+            <property name="text">
+             <string>Layout Color</string>
+            </property>
+           </widget>
+          </item>
+          <item row="15" column="1">
+           <widget class="QComboBox" name="layoutColorComboBox">
+            <item>
+             <property name="text">
+              <string>simple_pink</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>simple_green</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>simple_blue</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>simple_yellow</string>
+             </property>
+            </item>
            </widget>
           </item>
          </layout>
